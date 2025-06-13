@@ -1,7 +1,7 @@
 {
   "name": "my-resume-site",
   "version": "0.1.0",
-  "homepage": "http://ShotaArima.github.io",
+  "homepage": "https://shotaarima.github.io/Portfolio/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
