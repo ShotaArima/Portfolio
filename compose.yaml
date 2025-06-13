@@ -1,0 +1,10 @@
+services:
+  resume-app:
+    build: .
+    volumes:
+      - ./my-resume-site:/app
+    stdin_open: true
+    tty: true
+    working_dir: /app/
+    ports:
+    - 3000:3000
