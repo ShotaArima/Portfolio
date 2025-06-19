@@ -2,7 +2,7 @@ services:
   resume-app:
     build: .
     volumes:
-      - ./my-resume-site:/app
+      - ./my-resume:/app
     stdin_open: true
     tty: true
     working_dir: /app/
