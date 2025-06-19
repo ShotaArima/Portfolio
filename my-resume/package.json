@@ -1,6 +1,7 @@
 {
   "name": "my-resume",
   "version": "0.1.0",
+  "homepage": "https://shotaarima.github.io/Portfolio/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
