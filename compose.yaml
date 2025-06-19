@@ -1,11 +1,11 @@
 services:
   resume-app:
-    build: .
+    image: node:24-bookworm-slim
     volumes:
-      - ./my-resume-site:/app
+      - ./:/app
     stdin_open: true
     tty: true
     working_dir: /app/
-    ports:
-    - 3000:3000
-    command: sh -c "npm install && npm start"
+    # ports:
+    # - 3000:3000
+    # command: sh -c "npm install && npm start"
