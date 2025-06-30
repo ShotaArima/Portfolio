@@ -1,0 +1,20 @@
+.heroSection {
+  position: relative;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/app/public/background-image.jpeg") center center / cover no-repeat;
+  z-index: 0;
+  filter: brightness(50%);
+}
+
+.heroSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 暗さ調整 */
+  z-index: -1;
+}
