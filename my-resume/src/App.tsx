@@ -28,7 +28,7 @@ const App: React.FC = () => {
                     height="24"
                     className="d-inline-block align-text-top"
                   />
-                  学生室の住人
+                  学生室の住人の部屋
                 </a>
               </div>
 

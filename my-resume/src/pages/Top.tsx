@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Top.module.css';
 
 const Top: React.FC = () => {
-  return (
-    <section id="top" className={`relative min-h-screen flex items-center justify-center text-center overflow-hidden`}>
-      
-      {/* 画像：幅に合わせる */}
-      <img
-        src={`${process.env.PUBLIC_URL}/background-image.jpeg`}
-        alt="背景画像"
-        className={`${styles.heroImage}`}
-      />
+  const [show, setShow] = useState(false);
 
-      {/* 内容：前面に出す */}
-      <div className="relative z-10 p-6 text-white">
-        <h1 className="text-4xl font-bold mb-4">学生室の住人</h1>
-        <p className="text-lg">テックカンファレンスに参加したり、スタッフをしたりしています。</p>
+  useEffect(() => {
+    setShow(true);
+  }, []);
+  
+  return (
+    <section id="top" className={`relative min-h-screen flex items-center justify-center text-center overflow-hidden ${styles.heroSection}`}>
+      
+      <div
+        className={styles.background}
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/background-image.jpeg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className={`${styles.content} ${show ? styles.show : ''} `}>
+          <h1>Strike while the iron is hot.</h1>
+          <p>Welcome! On this page, I introduce my profile and activities. Please take a look around.</p>
+          <p></p>
+        </div>
       </div>
     </section>
   );
