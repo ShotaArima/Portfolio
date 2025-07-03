@@ -9,6 +9,7 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import FroSupp from './pages/FroSupp';
 import NotFound from './pages/NotFound'; // デフォルトエクスポートされたNotFoundをインポート
 
 const App: React.FC = () => {
@@ -71,6 +72,7 @@ const App: React.FC = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/frosupp" element={<FroSupp />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
