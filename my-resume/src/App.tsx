@@ -54,10 +54,6 @@ const App: React.FC = () => {
                   <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/contact">Contact</a>
                   </li>
-                  {/* <Link to="/skills" className="text-gray-700 hover:text-blue-600">Skills</Link>
-                  <Link to="/projects" className="text-gray-700 hover:text-blue-600">Projects</Link>
-                  <Link to="/blog" className="text-gray-700 hover:text-blue-600">Blog</Link>
-                  <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link> */}
                 </ul>
               </div>
             </nav>
