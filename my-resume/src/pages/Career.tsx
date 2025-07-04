@@ -1,18 +1,19 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { fetchMarkdown } from '../utils/fetchMarkdown'; // ユーティリティ関数でMarkdownを取得
+import React, { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const Career: React.FC = () => {
-  const [careerContent, setCareerContent] = useState<string>('');
+  const [markdown, setMarkdown] = useState<string>('');
 
   useEffect(() => {
-    fetchMarkdown('career.md').then(content => setCareerContent(content));
+    fetch(`${process.env.PUBLIC_URL}/markdowns/career.md`)
+      .then((res) => res.text())
+      .then((text) => setMarkdown(text));
   }, []);
 
   return (
-    <section id="career">
-      <h2>経歴</h2>
-      <div dangerouslySetInnerHTML={{ __html: careerContent }} />
+    <section id="career" className="text-left w-full p-4">
+      <h1>経歴</h1>
+      <ReactMarkdown>{markdown}</ReactMarkdown>
     </section>
   );
 };
