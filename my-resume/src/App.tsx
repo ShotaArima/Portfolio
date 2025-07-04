@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import { Home, Briefcase, Mail, Code, BookOpen } from 'lucide-react';
 import Top from './pages/Top';
 import Career from './pages/Career';
 import Skills from './pages/Skills';
@@ -14,7 +12,7 @@ import NotFound from './pages/NotFound'; // デフォルトエクスポートさ
 
 const App: React.FC = () => {
   return (
-     <div className="min-h-screen font-sans bg-white text-gray-900">
+    <div className="min-h-screen font-sans bg-white text-gray-900">
       <Router>
         <header className="w-full fixed top-0 bg-white shadow-md z-50">
           <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
