@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import styles from './top.module.css';
 
 const Top: React.FC = () => {
   const [markdown, setMarkdown] = useState<string>('');
@@ -12,9 +13,18 @@ const Top: React.FC = () => {
 
   return (
     <section id="Top" className="text-left w-full p-4">
-      <h1>Shota Arima</h1>
-      <p>(Handle name: 学生室の住人)</p>
+      <div className={styles.profileContainer}>
+        <img  src={`${process.env.PUBLIC_URL}/favicon.jpeg`} 
+              alt="Profile"
+              className={styles.profileImage}
+        />
       
+        <div className={styles.profileText}>
+          <h1>Shota Arima</h1>
+          <p>(Handle name: 学生室の住人)</p>
+          <p>学士:情報学</p>
+        </div>
+      </div>
       <ReactMarkdown>{markdown}</ReactMarkdown>
       
     </section>
