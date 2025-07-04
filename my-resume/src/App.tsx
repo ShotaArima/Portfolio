@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import Top from './pages/Top';
 import Career from './pages/Career';
 import Skills from './pages/Skills';
@@ -21,7 +21,7 @@ const App: React.FC = () => {
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
               {/* 左側：ナビゲーションバー */}
               <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/">
                   {/* <img 
                     src={`{process.env.PUBLIC_URL}/favicon.jpeg`}
                     width="24"
@@ -29,29 +29,29 @@ const App: React.FC = () => {
                     className="d-inline-block align-text-top"
                   /> */}
                   学生室の住人の部屋
-                </a>
+                </Link>
               </div>
 
               {/* 右側：ナビゲーションバー */}
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/">Home</a>
+                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href={`${baseUrl}career`}>Career</a>
+                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}career`}>Career</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href={`${baseUrl}skills`}>Skills</a>
+                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}skills`}>Skills</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href={`${baseUrl}projects`}>Projects</a>
+                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}projects`}>Projects</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href={`${baseUrl}blog`}>Blog</a>
+                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}blog`}>Blog</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href={`${baseUrl}contact`}>Contact</a>
+                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}contact`}>Contact</Link>
                   </li>
                 </ul>
               </div>
