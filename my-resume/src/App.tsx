@@ -20,13 +20,12 @@ const App: React.FC = () => {
               {/* 左側：ナビゲーションバー */}
               <div className="container-fluid">
                 <a className="navbar-brand" href="/">
-                  <img 
+                  {/* <img 
                     src={`${process.env.PUBLIC_URL}/favicon.jpeg`}
-                    // alt=""
-                    width="30"
+                    width="24"
                     height="24"
                     className="d-inline-block align-text-top"
-                  />
+                  /> */}
                   学生室の住人の部屋
                 </a>
               </div>
