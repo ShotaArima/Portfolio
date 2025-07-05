@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Top from './pages/Top';
 import Career from './pages/Career';
 import Skills from './pages/Skills';
@@ -10,12 +10,10 @@ import Contact from './pages/Contact';
 import FroSupp from './pages/FroSupp';
 import NotFound from './pages/NotFound'; // デフォルトエクスポートされたNotFoundをインポート
 
-const baseUrl = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '/';
-
 const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans bg-white text-gray-900">
-      <Router basename={baseUrl}>
+      <Router>
         <header className="w-full fixed top-0 bg-white shadow-md z-50">
           <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -39,35 +37,34 @@ const App: React.FC = () => {
                     <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}career`}>Career</Link>
+                    <Link className="nav-link active" aria-current="page" to="/career">Career</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}skills`}>Skills</Link>
+                    <Link className="nav-link active" aria-current="page" to="/skills">Skills</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}projects`}>Projects</Link>
+                    <Link className="nav-link active" aria-current="page" to="/projects">Projects</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}blog`}>Blog</Link>
+                    <Link className="nav-link active" aria-current="page" to="/blog">Blog</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to={`${baseUrl}contact`}>Contact</Link>
+                    <Link className="nav-link active" aria-current="page" to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
             </nav>
-
           </div>
         </header>
         <main className="p-6 max-w-4xl mx-auto">
           <Routes>
             <Route path="/" element={<Top />} />
-            <Route path="/career" element={<Career />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/frosupp" element={<FroSupp />} />
+            <Route path="career" element={<Career />} />
+            <Route path="skills" element={<Skills />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="frosupp" element={<FroSupp />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
